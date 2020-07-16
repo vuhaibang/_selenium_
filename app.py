@@ -22,15 +22,18 @@ while True:
     driver.get(LINK[0])
     heal_check()
     phut = random.randrange(1, 2)
+    print("Dang chay clip 1")
     time.sleep(60*phut)
 
     driver.get(LINK[1])
     heal_check()
+    print("Dang chay clip 2")
     phut = random.randrange(1, 2)
     time.sleep(60*phut)
 
     driver.get(LINK[2])
     heal_check()
+    print("Dang chay clip 3")
     phut = random.randrange(20, 60)
     time.sleep(60*phut)
 driver.close()
