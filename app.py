@@ -6,7 +6,7 @@ import random
 display = Display(visible=0, size=(1024, 768))
 display.start()
 driver = webdriver.Firefox()
-LINK = ['https://studio.youtube.com/video/RJWQ-xkbDt4/edit/basic',
+LINK = ['https://www.youtube.com/watch?v=RJWQ-xkbDt4',
         'https://www.youtube.com/watch?v=3q9psT2R-Ko',
         'https://www.youtube.com/watch?v=qkJqMGbDK40']
 
