@@ -9,22 +9,27 @@ driver = webdriver.Firefox()
 LINK = ['https://studio.youtube.com/video/RJWQ-xkbDt4/edit/basic',
         'https://www.youtube.com/watch?v=3q9psT2R-Ko',
         'https://www.youtube.com/watch?v=qkJqMGbDK40']
+
+def heal_check():
+    try:
+        driver.find_element_by_class_name("ytp-play-button").click()
+    except:
+        time.sleep(1)
+        driver.find_element_by_class_name("ytp-play-button").click()
+
 while True:
     driver.get(LINK[0])
-    time.sleep(5)
-    driver.find_element_by_class_name("ytp-play-button").click()
+    heal_check()
     phut = random.randrange(1, 2)
     time.sleep(60*phut)
 
     driver.get(LINK[1])
-    time.sleep(5)
-    driver.find_element_by_class_name("ytp-play-button").click()
+    heal_check()
     phut = random.randrange(1, 2)
     time.sleep(60*phut)
 
     driver.get(LINK[2])
-    time.sleep(5)
-    driver.find_element_by_class_name("ytp-play-button").click()
+    heal_check()
     phut = random.randrange(20, 60)
     time.sleep(60*phut)
 driver.close()
