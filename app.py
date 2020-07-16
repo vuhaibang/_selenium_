@@ -16,7 +16,7 @@ def heal_check():
     except:
         print("Sleep 1s")
         time.sleep(1)
-        driver.find_element_by_class_name("ytp-play-button").click()
+        heal_check()
 
 while True:
     driver.get(LINK[0])
