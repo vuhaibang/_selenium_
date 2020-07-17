@@ -6,8 +6,6 @@ import asyncio
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
-chrome_browser = webdriver.Chrome()
-firefox_browser = webdriver.Firefox()
 URL = {'https://www.youtube.com/watch?v=RJWQ-xkbDt4': 60,
        'https://www.youtube.com/watch?v=3q9psT2R-Ko': 60,
        'https://www.youtube.com/watch?v=qkJqMGbDK40': 105 * 60}
@@ -24,6 +22,7 @@ def run_video(driver):
 
 async def run_chrome_browser():
     while True:
+        chrome_browser = webdriver.Chrome()
         URL_LINK_CHROME = [url for url in URL.keys()]
         random.shuffle(URL_LINK_CHROME)
         for url in URL_LINK_CHROME:
@@ -37,10 +36,12 @@ async def run_chrome_browser():
             )
             print(f"Chrome browser run {url} in {time_sleep} s")
             await asyncio.sleep(time_sleep)
+        chrome_browser.close()
 
 
 async def run_firefox_browser():
     while True:
+        firefox_browser = webdriver.Firefox()
         URL_LINK_FIREFOX = [url for url in URL.keys()]
         random.shuffle(URL_LINK_FIREFOX)
         for url in URL_LINK_FIREFOX:
@@ -54,6 +55,7 @@ async def run_firefox_browser():
             )
             print(f"Firefox browser run {url} in {time_sleep} s")
             await asyncio.sleep(time_sleep)
+        firefox_browser.close()
 
 
 async def main():
