@@ -24,11 +24,11 @@ def run_video(driver):
 
 async def run_chrome_browser():
     while True:
-        URL_LINK = [url for url in URL.keys()]
-        random.shuffle(URL_LINK)
-        for url in URL_LINK:
+        URL_LINK_CHROME = [url for url in URL.keys()]
+        random.shuffle(URL_LINK_CHROME)
+        for url in URL_LINK_CHROME:
             chrome_browser.get(url)
-            run_video(chrome_browser)
+            # run_video(chrome_browser)
             time_vd = URL[url]
             time_sleep = random.choice(
                 [time_vd,
@@ -41,9 +41,9 @@ async def run_chrome_browser():
 
 async def run_firefox_browser():
     while True:
-        URL_LINK = [url for url in URL.keys()]
-        random.shuffle(URL_LINK)
-        for url in URL_LINK:
+        URL_LINK_FIREFOX = [url for url in URL.keys()]
+        random.shuffle(URL_LINK_FIREFOX)
+        for url in URL_LINK_FIREFOX:
             firefox_browser.get(url)
             time_vd = URL[url]
             run_video(firefox_browser)
