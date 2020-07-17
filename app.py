@@ -28,11 +28,12 @@ async def run_chrome_browser():
         random.shuffle(URL_LINK)
         for url in URL_LINK:
             chrome_browser.get(url)
+            run_video(chrome_browser)
             time_vd = URL[url]
             time_sleep = random.choice(
-                time_vd,
+                [time_vd,
                 random.randrange(int(time_vd / 2), time_vd),
-                random.randrange(int(time_vd / 2), time_vd)
+                random.randrange(int(time_vd / 2), time_vd)]
             )
             print(f"Chrome browser run {url} in {time_sleep} s")
             await asyncio.sleep(time_sleep)
@@ -47,9 +48,9 @@ async def run_firefox_browser():
             time_vd = URL[url]
             run_video(firefox_browser)
             time_sleep = random.choice(
-                time_vd,
+                [time_vd,
                 random.randrange(int(time_vd / 2), time_vd),
-                random.randrange(int(time_vd / 2), time_vd)
+                random.randrange(int(time_vd / 2), time_vd)]
             )
             print(f"Firefox browser run {url} in {time_sleep} s")
             await asyncio.sleep(time_sleep)
