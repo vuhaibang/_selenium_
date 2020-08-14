@@ -40,7 +40,7 @@ async def run_chrome_browser():
             print(f"Chrome browser run {url} in {time_sleep} s")
             await asyncio.sleep(time_sleep)
         chrome_browser.close()
-
+        time.sleep(60*30)             
 
 async def run_firefox_browser():
     while True:
@@ -59,6 +59,7 @@ async def run_firefox_browser():
             print(f"Firefox browser run {url} in {time_sleep} s")
             await asyncio.sleep(time_sleep)
         firefox_browser.close()
+        time.sleep(60*30)        
 
 
 async def main():
