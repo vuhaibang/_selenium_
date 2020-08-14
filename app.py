@@ -6,9 +6,12 @@ import asyncio
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
-URL = {'https://www.youtube.com/watch?v=RJWQ-xkbDt4': 60,
-       'https://www.youtube.com/watch?v=3q9psT2R-Ko': 60,
-       'https://www.youtube.com/watch?v=qkJqMGbDK40': 105 * 60}
+URL = {'https://www.youtube.com/watch?v=2SrsxOCjY30': 4*60+36,
+       'https://www.youtube.com/watch?v=IoW8o69-OoE': 3*60+48,
+       'https://www.youtube.com/watch?v=bg--xcqTupw': 3 * 60,
+      'https://www.youtube.com/watch?v=QgJBp17wns0': 2*60+30,
+      'https://www.youtube.com/watch?v=CP90PgSr1Fg&t=76s': 3*60,
+      'https://www.youtube.com/watch?v=ggBhTQsyDys': 5*60}
 
 
 def run_video(driver):
@@ -31,8 +34,8 @@ async def run_chrome_browser():
             time_vd = URL[url]
             time_sleep = random.choice(
                 [time_vd,
-                random.randrange(int(time_vd / 2), time_vd),
-                random.randrange(int(time_vd / 2), time_vd)]
+                random.randrange(int(time_vd 4/ 5), time_vd),
+                random.randrange(int(time_vd 6/ 7), time_vd)]
             )
             print(f"Chrome browser run {url} in {time_sleep} s")
             await asyncio.sleep(time_sleep)
@@ -50,8 +53,8 @@ async def run_firefox_browser():
             run_video(firefox_browser)
             time_sleep = random.choice(
                 [time_vd,
-                random.randrange(int(time_vd / 2), time_vd),
-                random.randrange(int(time_vd / 2), time_vd)]
+                random.randrange(int(time_vd 5/ 6), time_vd),
+                random.randrange(int(time_vd 6/ 7), time_vd)]
             )
             print(f"Firefox browser run {url} in {time_sleep} s")
             await asyncio.sleep(time_sleep)
