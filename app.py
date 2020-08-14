@@ -38,6 +38,9 @@ async def run_chrome_browser():
                 random.randrange(int(time_vd *6/ 7), time_vd)]
             )
             print(f"Chrome browser run {url} in {time_sleep} s")
+            body = driver.find_element_by_css_selector('body')
+            for i in range(int(time_sleep/10)):
+                body.send_keys(Keys.PAGE_DOWN)
             await asyncio.sleep(time_sleep)
         chrome_browser.close()
         time.sleep(60*30)             
@@ -56,7 +59,11 @@ async def run_firefox_browser():
                 random.randrange(int(time_vd *5/ 6), time_vd),
                 random.randrange(int(time_vd *6/ 7), time_vd)]
             )
+            body = driver.find_element_by_css_selector('body')
             print(f"Firefox browser run {url} in {time_sleep} s")
+            body = driver.find_element_by_css_selector('body')
+            for i in range(int(time_sleep/10)):
+                body.send_keys(Keys.PAGE_DOWN)
             await asyncio.sleep(time_sleep)
         firefox_browser.close()
         time.sleep(60*30)        
