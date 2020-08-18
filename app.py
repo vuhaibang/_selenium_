@@ -74,7 +74,7 @@ async def run_firefox_browser():
             await asyncio.sleep(time_sleep)
         firefox_browser.close()
         count_fire_fox += 1
-        print("Fire fox run", str(cont_fire_fox))
+        print("Fire fox run", str(count_fire_fox))
         time.sleep(60*1)        
 
 
