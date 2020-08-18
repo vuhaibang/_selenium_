@@ -4,6 +4,9 @@ from selenium.webdriver.common.keys import Keys
 import time
 import random
 import asyncio
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+
+
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
@@ -48,7 +51,8 @@ async def run_chrome_browser():
 
 async def run_firefox_browser():
     while True:
-        firefox_browser = webdriver.Firefox()
+        binary = FirefoxBinary('path/to/binary')
+        firefox_browser = webdriver.Firefox(firefox_binary=binary)
         URL_LINK_FIREFOX = [url for url in URL.keys()]
         random.shuffle(URL_LINK_FIREFOX)
         for url in URL_LINK_FIREFOX:
