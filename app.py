@@ -75,7 +75,7 @@ async def run_firefox_browser():
 async def main():
     await asyncio.gather(
         run_firefox_browser(),
-#         run_chrome_browser(),
+        run_chrome_browser(),
     )
 
 
