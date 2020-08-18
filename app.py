@@ -47,7 +47,7 @@ async def run_chrome_browser():
                 body.send_keys(Keys.PAGE_DOWN)
             await asyncio.sleep(time_sleep)
         chrome_browser.close()
-        time.sleep(60*30)             
+        time.sleep(60*1)             
 
 async def run_firefox_browser():
     while True:
@@ -69,7 +69,7 @@ async def run_firefox_browser():
                 body.send_keys(Keys.PAGE_DOWN)
             await asyncio.sleep(time_sleep)
         firefox_browser.close()
-        time.sleep(60*30)        
+        time.sleep(60*1)        
 
 
 async def main():
