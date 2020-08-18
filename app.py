@@ -51,8 +51,7 @@ async def run_chrome_browser():
 
 async def run_firefox_browser():
     while True:
-        binary = FirefoxBinary('path/to/binary')
-        firefox_browser = webdriver.Firefox(firefox_binary=binary)
+        firefox_browser = webdriver.Firefox()
         URL_LINK_FIREFOX = [url for url in URL.keys()]
         random.shuffle(URL_LINK_FIREFOX)
         for url in URL_LINK_FIREFOX:
