@@ -10,22 +10,20 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
-URL = {'https://www.youtube.com/watch?v=2SrsxOCjY30': 4*60+36,
-       'https://www.youtube.com/watch?v=IoW8o69-OoE': 3*60+48,
-       'https://www.youtube.com/watch?v=bg--xcqTupw': 3 * 60,
-      'https://www.youtube.com/watch?v=QgJBp17wns0': 2*60+30,
-      'https://www.youtube.com/watch?v=CP90PgSr1Fg&t=76s': 3*60,
-      'https://www.youtube.com/watch?v=ggBhTQsyDys': 5*60}
+URL = {'https://www.youtube.com/watch?v=tvpnFxGbywY': 4*60+36,
+       'https://www.youtube.com/watch?v=M3bezYerYxQ': 60}
 
 
 def run_video(driver):
     try:
-        driver.find_element_by_class_name("ytp-play-button").click()
+        a = driver.find_element_by_class_name('ytp-play-button')
+        if "Play" in a.get_attribute('title'):
+            print(a.get_attribute('title'))
+            a.click()
     except:
         print("Sleep 1s")
         time.sleep(1)
         run_video(driver)
-
 
 async def run_chrome_browser():
     count_browser = 0
@@ -35,22 +33,24 @@ async def run_chrome_browser():
         random.shuffle(URL_LINK_CHROME)
         for url in URL_LINK_CHROME:
             chrome_browser.get(url)
-            # run_video(chrome_browser)
+            run_video(chrome_browser)
             time_vd = URL[url]
             time_sleep = random.choice(
                 [time_vd,
                 random.randrange(int(time_vd* 4/ 5), time_vd),
-                random.randrange(int(time_vd *6/ 7), time_vd)]
+                random.randrange(int(time_vd * 6/ 7), time_vd)]
             )
             print(f"Chrome browser run {url} in {time_sleep} s")
             body = chrome_browser.find_element_by_css_selector('body')
             for i in range(int(time_sleep/10)):
                 body.send_keys(Keys.PAGE_DOWN)
+                with open("/home/vuhaibangtk/test.txt", "w+") as f:
+                    f.write(str(time.time()))
             await asyncio.sleep(time_sleep)
         chrome_browser.close()
         count_browser += 1
         print("Chrome run ", count_browser)
-        time.sleep(60*1)             
+        time.sleep(60*1)
 
 async def run_firefox_browser():
     count_fire_fox = 0
@@ -64,13 +64,15 @@ async def run_firefox_browser():
             run_video(firefox_browser)
             time_sleep = random.choice(
                 [time_vd,
-                random.randrange(int(time_vd *5/ 6), time_vd),
+                random.randrange(int(time_vd *2/ 3), time_vd),
                 random.randrange(int(time_vd *6/ 7), time_vd)]
             )
             print(f"Firefox browser run {url} in {time_sleep} s")
             body = firefox_browser.find_element_by_css_selector('body')
             for i in range(int(time_sleep/10)):
                 body.send_keys(Keys.PAGE_DOWN)
+                with open("/home/vuhaibangtk/test.txt", "w+") as f:
+                    f.write(str(time.time()))
             await asyncio.sleep(time_sleep)
         firefox_browser.close()
         count_fire_fox += 1

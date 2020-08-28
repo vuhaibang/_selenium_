@@ -1,0 +1,25 @@
+1598596312630	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.V26ccVMv0JgW"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598596314115	Marionette	INFO	Listening on port 35235
+1598596314134	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598596352261	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.jJVoPp362wmV"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598596353712	Marionette	INFO	Listening on port 36145
+1598596353765	Marionette	WARN	TLS certificate errors will be ignored for this session
+Gdk-Message: 13:32:36.599: /usr/lib/firefox/firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :3.
+
+Gdk-Message: 13:32:36.599: /usr/lib/firefox/firefox: Fatal IO error 11 (Resource temporarily unavailable) on X server :3.
+
+Exiting due to channel error.
+1598597831267	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.PNoT3XT0cYRI"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598597832829	Marionette	INFO	Listening on port 46699
+1598597832876	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1598597887032	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.HkepfLkR6ZEx"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1598597888402	Marionette	INFO	Listening on port 41531
+1598597888436	Marionette	WARN	TLS certificate errors will be ignored for this session
+1598597903238	Marionette	INFO	Stopped listening on port 41531
