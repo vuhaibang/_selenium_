@@ -10,9 +10,12 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
-URL = {'https://www.youtube.com/watch?v=lH0ud6EMUoE&feature=youtu.be': 60*65,
-      'https://www.youtube.com/watch?v=e9xj0_d-HXY&feature=youtu.be': 42*60,
-      'https://www.youtube.com/watch?v=1F0mYfBgID4&feature=youtu.be': 18*60}
+URL = {'https://www.youtube.com/watch?v=lH0ud6EMUoE': 60*65,
+      'https://www.youtube.com/watch?v=e9xj0_d-HXY': 42*60,
+      'https://www.youtube.com/watch?v=1F0mYfBgID4': 18*60,
+      'https://www.youtube.com/watch?v=0naW-OC1A1w': 60*60,
+      'https://www.youtube.com/watch?v=fl7rlRmNM24': 25*60,
+      'https://www.youtube.com/watch?v=nTzVFb5CIYg': 25*60}
 
 
 def run_video(driver):
