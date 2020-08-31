@@ -37,7 +37,7 @@ def run_video(driver):
 async def run_chrome_browser():
     count_browser = 0
     while True:
-        chrome_browser = webdriver.Chrome(chrome_options=chrome_options)
+        chrome_browser = webdriver.Chrome(options=chrome_options)
         URL_LINK_CHROME = [url for url in URL.keys()]
         random.shuffle(URL_LINK_CHROME)
         for url in URL_LINK_CHROME:
