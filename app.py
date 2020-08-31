@@ -10,6 +10,8 @@ from selenium.webdriver.chrome.options import Options
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 display = Display(visible=0, size=(1024, 768))
 display.start()
 URL = {'https://www.youtube.com/watch?v=lH0ud6EMUoE': 60*65,
