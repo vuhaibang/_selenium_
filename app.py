@@ -49,8 +49,11 @@ async def run_chrome_browser():
             body = chrome_browser.find_element_by_css_selector('body')
             for i in range(int(time_sleep/10)):
                 body.send_keys(Keys.PAGE_DOWN)
-                with open("/home/vuhaibangtk/test.txt", "w+") as f:
-                    f.write(str(time.time()))
+                try:
+                      with open("/home/vuhaibangtk/test.txt", "w+") as f:
+                          f.write(str(time.time()))
+                except:
+                  pass
             await asyncio.sleep(time_sleep)
         chrome_browser.close()
         count_browser += 1
@@ -76,8 +79,11 @@ async def run_firefox_browser():
             body = firefox_browser.find_element_by_css_selector('body')
             for i in range(int(time_sleep/10)):
                 body.send_keys(Keys.PAGE_DOWN)
-                with open("/home/vuhaibangtk/test.txt", "w+") as f:
-                    f.write(str(time.time()))
+                try:
+                      with open("/home/vuhaibangtk/test.txt", "w+") as f:
+                          f.write(str(time.time()))
+                except:
+                  pass
             await asyncio.sleep(time_sleep)
         firefox_browser.close()
         count_fire_fox += 1
