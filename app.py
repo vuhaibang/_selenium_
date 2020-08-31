@@ -15,7 +15,8 @@ URL = {'https://www.youtube.com/watch?v=lH0ud6EMUoE': 60*65,
       'https://www.youtube.com/watch?v=1F0mYfBgID4': 18*60,
       'https://www.youtube.com/watch?v=0naW-OC1A1w': 60*60,
       'https://www.youtube.com/watch?v=fl7rlRmNM24': 25*60,
-      'https://www.youtube.com/watch?v=nTzVFb5CIYg': 25*60}
+      'https://www.youtube.com/watch?v=nTzVFb5CIYg': 25*60,
+      'https://www.youtube.com/watch?v=y-uif_hRP0w': 60*60*2}
 
 
 def run_video(driver):
