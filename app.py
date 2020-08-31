@@ -5,9 +5,11 @@ import time
 import random
 import asyncio
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+from selenium.webdriver.chrome.options import Options
 
 
-
+chrome_options = Options()
+chrome_options.add_argument("--headless")
 display = Display(visible=0, size=(1024, 768))
 display.start()
 URL = {'https://www.youtube.com/watch?v=lH0ud6EMUoE': 60*65,
@@ -33,7 +35,7 @@ def run_video(driver):
 async def run_chrome_browser():
     count_browser = 0
     while True:
-        chrome_browser = webdriver.Chrome()
+        chrome_browser = webdriver.Chrome(chrome_options=chrome_options)
         URL_LINK_CHROME = [url for url in URL.keys()]
         random.shuffle(URL_LINK_CHROME)
         for url in URL_LINK_CHROME:
