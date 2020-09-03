@@ -54,28 +54,23 @@ async def run_chrome_browser():
             )
             print(f"Chrome browser run {url} in {time_sleep} s")
             body = chrome_browser.find_element_by_css_selector('body')
+            body.send_keys(Keys.PAGE_DOWN)
 
-
-            for i in range(int(time_sleep/10)):
+            for i in range(int(time_sleep/15)):
+                body.send_keys(Keys.CONTROL + Keys.HOME)
                 try:
+                    chrome_browser.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-watch-flexy/div[4]/div[1]/div/div[1]/div/div/div/ytd-player/div/div/div[4]/div/div[3]/div/div[2]/span/button').click()
                     chrome_browser.find_element_by_xpath('//*[@id="button"]').click()
-                    chrome_browser.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
                 except:
                     pass
 
-                body.send_keys(Keys.PAGE_DOWN)
                 body.send_keys(Keys.PAGE_UP)
-                try:
-                      with open("/home/vuhaibangtk/test.txt", "w+") as f:
-                          f.write(str(time.time()))
-                except:
-                  pass
                 await asyncio.sleep(time_sleep)
+
             chrome_browser.close()
 
         count_browser += 1
         print("Chrome run ", count_browser)
-        time.sleep(60*1)
 
 async def run_firefox_browser():
     count_fire_fox = 0
@@ -96,28 +91,21 @@ async def run_firefox_browser():
             )
             print(f"Firefox browser run {url} in {time_sleep} s")
             body = firefox_browser.find_element_by_css_selector('body')
+            body.send_keys(Keys.PAGE_DOWN)
 
-
-            for i in range(int(time_sleep/10)):
+            for i in range(int(time_sleep/15)):
                 try:
-                    firefox_browser.find_element_by_xpath('//*[@id="button"]').click()
-                    firefox_browser.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
+                    firefox_browser.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-watch-flexy/div[4]/div[1]/div/div[1]/div/div/div/ytd-player/div/div/div[4]/div/div[3]/div/div[2]/span/button').click()
+                    body.send_keys(Keys.PAGE_DOWN)
                 except:
                     pass
+
                 body.send_keys(Keys.PAGE_UP)
-                body.send_keys(Keys.PAGE_DOWN)
-
-                try:
-                      with open("/home/vuhaibangtk/test.txt", "w+") as f:
-                          f.write(str(time.time()))
-                except:
-                  pass
-
                 await asyncio.sleep(10)
+
             firefox_browser.close()
         count_fire_fox += 1
         print("Fire fox run", str(count_fire_fox))
-        time.sleep(60*1)        
 
 
 async def main():
