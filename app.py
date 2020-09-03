@@ -43,6 +43,7 @@ async def run_chrome_browser():
         random.shuffle(URL_LINK_CHROME)
 
         for url in URL_LINK_CHROME:
+            click_premium = 0
             chrome_browser = webdriver.Chrome(options=chrome_options)
             chrome_browser.get(url)
             run_video(chrome_browser)
@@ -61,6 +62,9 @@ async def run_chrome_browser():
                 try:
                     chrome_browser.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-watch-flexy/div[4]/div[1]/div/div[1]/div/div/div/ytd-player/div/div/div[4]/div/div[3]/div/div[2]/span/button').click()
                     chrome_browser.find_element_by_xpath('//*[@id="button"]').click()
+                    if click_premium < 1:
+                        chrome_browser.find_element_by_xpath('/html/body/ytd-app/ytd-popup-container/paper-dialog/ytd-mealbar-promo-renderer/div/div[2]/ytd-button-renderer[1]/a').click()
+                        click_premium += 1
                 except:
                     pass
 
@@ -80,6 +84,7 @@ async def run_firefox_browser():
         random.shuffle(URL_LINK_FIREFOX)
 
         for url in URL_LINK_FIREFOX:
+            click_premium = 0
             firefox_browser = webdriver.Firefox()
             firefox_browser.get(url)
             time_vd = URL[url]
@@ -97,6 +102,9 @@ async def run_firefox_browser():
                 try:
                     firefox_browser.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-watch-flexy/div[4]/div[1]/div/div[1]/div/div/div/ytd-player/div/div/div[4]/div/div[3]/div/div[2]/span/button').click()
                     body.send_keys(Keys.PAGE_DOWN)
+                    if click_premium < 1:
+                        firefox_browser.find_element_by_xpath('/html/body/ytd-app/ytd-popup-container/paper-dialog/ytd-mealbar-promo-renderer/div/div[2]/ytd-button-renderer[1]/a').click()
+                        click_premium += 1
                 except:
                     pass
 
