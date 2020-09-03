@@ -44,7 +44,7 @@ async def run_chrome_browser():
 
         for url in URL_LINK_CHROME:
             click_premium = 0
-            chrome_browser = webdriver.Chrome(options=chrome_options)
+            chrome_browser = webdriver.Chrome() # options=chrome_options
             chrome_browser.get(url)
             run_video(chrome_browser)
             time_vd = URL[url]
