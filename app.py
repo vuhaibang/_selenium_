@@ -53,6 +53,7 @@ async def run_chrome_browser():
             print(f"Chrome browser run {url} in {time_sleep} s")
             body = chrome_browser.find_element_by_css_selector('body')
             for i in range(int(time_sleep/10)):
+                body.send_keys(Keys.PAGE_UP)
                 body.send_keys(Keys.PAGE_DOWN)
                 body.send_keys(Keys.PAGE_UP)
                 try:
