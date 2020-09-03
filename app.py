@@ -65,7 +65,6 @@ async def run_chrome_browser():
                 body.send_keys(Keys.CONTROL + Keys.HOME)
 
                 try:
-                    print(1)
                     chrome_browser.find_element_by_class_name("ytp-ad-skip-button").click()
                     if click_premium < 1:
                         chrome_browser.find_element_by_xpath('/html/body/ytd-app/ytd-popup-container/paper-dialog/ytd-mealbar-promo-renderer/div/div[2]/ytd-button-renderer[1]/a').click()
@@ -106,7 +105,7 @@ async def run_firefox_browser():
             body.send_keys(Keys.PAGE_DOWN)
 
             sl = 15
-            for i in range(int(time_sleep/15)):
+            for i in range(int(time_sleep/sl)):
                 try:
                     if i % 2 != 0:
                         firefox_browser.find_element_by_class_name("ytp-ad-skip-button").click()
