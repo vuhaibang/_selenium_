@@ -27,6 +27,7 @@ URL = {'https://www.youtube.com/watch?v=lH0ud6EMUoE': 60*65,
 def run_video(driver):
     try:
         a = driver.find_element_by_class_name('ytp-play-button')
+
         if "Play" in a.get_attribute('title'):
             print(a.get_attribute('title'))
             a.click()
@@ -52,9 +53,15 @@ async def run_chrome_browser():
             )
             print(f"Chrome browser run {url} in {time_sleep} s")
             body = chrome_browser.find_element_by_css_selector('body')
-            for i in range(20):
-                body.send_keys(Keys.PAGE_UP)
+
+
             for i in range(int(time_sleep/10)):
+                try:
+                    chrome_browser.find_element_by_xpath('//*[ @ id = "text"]').click()
+                    chrome_browser.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
+                except:
+                    pass
+
                 body.send_keys(Keys.PAGE_DOWN)
                 body.send_keys(Keys.PAGE_UP)
                 try:
@@ -85,7 +92,16 @@ async def run_firefox_browser():
             )
             print(f"Firefox browser run {url} in {time_sleep} s")
             body = firefox_browser.find_element_by_css_selector('body')
+
             for i in range(int(time_sleep/10)):
+                try:
+                    firefox_browser.find_element_by_xpath('//*[ @ id = "text"]').click()
+                    firefox_browser.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
+                except:
+                    pass
+
+            for i in range(int(time_sleep/10)):
+                body.send_keys(Keys.PAGE_UP)
                 body.send_keys(Keys.PAGE_DOWN)
                 try:
                       with open("/home/vuhaibangtk/test.txt", "w+") as f:
