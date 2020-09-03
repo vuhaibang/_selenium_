@@ -54,8 +54,8 @@ async def run_chrome_browser():
             time_vd = URL[url]
             time_sleep = random.choice(
                 [time_vd,
-                random.randrange(int(time_vd* 4/ 5), time_vd),
-                random.randrange(int(time_vd * 6/ 7), time_vd)]
+                random.randrange(int(time_vd* 1/ 3), time_vd),
+                random.randrange(int(time_vd * 1/ 7), time_vd)]
             )
             print(f"Chrome browser run {url} in {time_sleep} s")
             body = chrome_browser.find_element_by_css_selector('body')
@@ -77,8 +77,10 @@ async def run_chrome_browser():
                 await asyncio.sleep(sl)
 
             chrome_browser.close()
+            await asyncio.sleep(60)
 
         count_browser += 1
+        await asyncio.sleep(60 * 10)
         print("Chrome run ", count_browser)
 
 async def run_firefox_browser():
@@ -96,8 +98,8 @@ async def run_firefox_browser():
             run_video(firefox_browser)
             time_sleep = random.choice(
                 [time_vd,
-                random.randrange(int(time_vd *2/ 3), time_vd),
-                random.randrange(int(time_vd *6/ 7), time_vd)]
+                random.randrange(int(time_vd *1/ 3), time_vd),
+                random.randrange(int(time_vd *1/ 7), time_vd)]
             )
             print(f"Firefox browser run {url} in {time_sleep} s")
             body = firefox_browser.find_element_by_css_selector('body')
@@ -119,7 +121,11 @@ async def run_firefox_browser():
                 await asyncio.sleep(sl)
 
             firefox_browser.close()
+            await asyncio.sleep(60)
+
         count_fire_fox += 1
+        await asyncio.sleep(60*10)
+
         print("Fire fox run", str(count_fire_fox))
 
 
