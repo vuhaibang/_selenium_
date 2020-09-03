@@ -404,3 +404,101 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 [Child 12048, MediaDecoderStateMachine #1] WARNING: Decoder=7f4a521c2400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-3WGgad/firefox-80.0+build2/dom/media/MediaDecoderStateMachine.cpp, line 3470
 [Child 12048, MediaDecoderStateMachine #1] WARNING: Decoder=7f4a521c2400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-3WGgad/firefox-80.0+build2/dom/media/MediaDecoderStateMachine.cpp, line 3470
 1599117793403	Marionette	INFO	Stopped listening on port 34063
+1599119215056	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.dZmxqOrFKPw3"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119216474	Marionette	INFO	Listening on port 35421
+1599119216560	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.youtube.com/s/player/86f77974/player_ias.vflset/en_US/webgl.js, line 207: WebGL warning: drawArraysInstanced: TEXTURE_2D at unit 0 is incomplete: The dimensions of `level_base` are not all positive.
+Exiting due to channel error.
+Exiting due to channel error.
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xA00004,name=PTexture::Msg_RecycleTexture) Channel error: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x5F0004,name=PImageBridge::Msg_Update) Channel error: cannot send/recv
+
+Exiting due to channel error.
+1599119267958	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.8DsZmhb1JhO7"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119269451	Marionette	INFO	Listening on port 42685
+1599119269464	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599119308807	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.pOuUfHFgOuHQ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119310212	Marionette	INFO	Listening on port 43509
+1599119310311	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599119358700	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.KE2f0jqIWe4W"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119360207	Marionette	INFO	Listening on port 39231
+1599119360307	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: (new TypeError("parent is null", "resource://devtools/client/inspector/shared/style-change-tracker.js", 67))
+TypeError: parent is null: canMutationImpactCurrentStyles@resource://devtools/client/inspector/shared/style-change-tracker.js:67:24
+onMutations@resource://devtools/client/inspector/shared/style-change-tracker.js:84:41
+_emit@resource://devtools/shared/event-emitter.js:226:34
+emit@resource://devtools/shared/event-emitter.js:172:18
+emit@resource://devtools/shared/event-emitter.js:324:18
+getMutations@resource://devtools/client/fronts/walker.js:406:10
+
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2271))
+console.error: (new TypeError("container.node.targetFront is null", "resource://devtools/client/inspector/markup/markup.js", 2271))
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599119431426	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.LUEwQPf9ayQ3"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119432900	Marionette	INFO	Listening on port 35259
+1599119432938	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 14924, MediaDecoderStateMachine #1] WARNING: Decoder=7f411f897c00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-3WGgad/firefox-80.0+build2/dom/media/MediaDecoderStateMachine.cpp, line 3470
+JavaScript error: resource://gre/actors/AudioPlaybackParent.jsm, line 19: TypeError: browser is null
+1599119466778	Marionette	INFO	Stopped listening on port 35259
+1599119500225	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.SRsFmYJjQSNJ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119501614	Marionette	INFO	Listening on port 37469
+1599119501642	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 15180, MediaDecoderStateMachine #1] WARNING: Decoder=7f5e11c84400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-3WGgad/firefox-80.0+build2/dom/media/MediaDecoderStateMachine.cpp, line 3470
+console.warn: "Inspector destroyed while executing onReflow callback"
+JavaScript error: resource://gre/actors/AudioPlaybackParent.jsm, line 19: TypeError: browser is null
+1599119563761	Marionette	INFO	Stopped listening on port 37469
+1599119588740	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.7w4Gv02xrBFZ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119590266	Marionette	INFO	Listening on port 37159
+1599119590345	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599119615304	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.gyFfL3PGtIkh"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119616811	Marionette	INFO	Listening on port 42207
+1599119616916	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 15759, MediaDecoderStateMachine #1] WARNING: Decoder=7f65e82bd000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-3WGgad/firefox-80.0+build2/dom/media/MediaDecoderStateMachine.cpp, line 3470
+JavaScript error: resource://gre/actors/AudioPlaybackParent.jsm, line 19: TypeError: browser is null
+1599119641251	Marionette	INFO	Stopped listening on port 42207
+1599119647489	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.3KjeFwglqs9p"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119648944	Marionette	INFO	Listening on port 39123
+1599119649004	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 16044, MediaDecoderStateMachine #1] WARNING: Decoder=7f93808cf000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-3WGgad/firefox-80.0+build2/dom/media/MediaDecoderStateMachine.cpp, line 3470
+[Child 16044, MediaDecoderStateMachine #1] WARNING: Decoder=7f93808cf000 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-3WGgad/firefox-80.0+build2/dom/media/MediaDecoderStateMachine.cpp, line 3470
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599119674295	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Z4GvAllpu02P"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119675772	Marionette	INFO	Listening on port 39903
+1599119675799	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599119757956	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.qzQMPN0pvrY8"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599119759343	Marionette	INFO	Listening on port 37541
+1599119759363	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 16584, MediaDecoderStateMachine #1] WARNING: Decoder=7f695386f400 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /build/firefox-3WGgad/firefox-80.0+build2/dom/media/MediaDecoderStateMachine.cpp, line 3470
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

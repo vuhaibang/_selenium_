@@ -56,12 +56,13 @@ async def run_chrome_browser():
             print(f"Chrome browser run {url} in {time_sleep} s")
             body = chrome_browser.find_element_by_css_selector('body')
             body.send_keys(Keys.PAGE_DOWN)
-
-            for i in range(int(time_sleep/15)):
+            sl = 15
+            for i in range(int(time_sleep/sl)):
                 body.send_keys(Keys.CONTROL + Keys.HOME)
+
                 try:
-                    chrome_browser.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-watch-flexy/div[4]/div[1]/div/div[1]/div/div/div/ytd-player/div/div/div[4]/div/div[3]/div/div[2]/span/button').click()
-                    chrome_browser.find_element_by_xpath('//*[@id="button"]').click()
+                    print(1)
+                    chrome_browser.find_element_by_class_name("ytp-ad-skip-button").click()
                     if click_premium < 1:
                         chrome_browser.find_element_by_xpath('/html/body/ytd-app/ytd-popup-container/paper-dialog/ytd-mealbar-promo-renderer/div/div[2]/ytd-button-renderer[1]/a').click()
                         click_premium += 1
@@ -69,7 +70,7 @@ async def run_chrome_browser():
                     pass
 
                 body.send_keys(Keys.PAGE_UP)
-                await asyncio.sleep(time_sleep)
+                await asyncio.sleep(sl)
 
             chrome_browser.close()
 
@@ -98,10 +99,12 @@ async def run_firefox_browser():
             body = firefox_browser.find_element_by_css_selector('body')
             body.send_keys(Keys.PAGE_DOWN)
 
+            sl = 15
             for i in range(int(time_sleep/15)):
                 try:
-                    firefox_browser.find_element_by_xpath('/html/body/ytd-app/div/ytd-page-manager/ytd-watch-flexy/div[4]/div[1]/div/div[1]/div/div/div/ytd-player/div/div/div[4]/div/div[3]/div/div[2]/span/button').click()
-                    body.send_keys(Keys.PAGE_DOWN)
+                    if i % 2 != 0:
+                        firefox_browser.find_element_by_class_name("ytp-ad-skip-button").click()
+                        body.send_keys(Keys.PAGE_DOWN)
                     if click_premium < 1:
                         firefox_browser.find_element_by_xpath('/html/body/ytd-app/ytd-popup-container/paper-dialog/ytd-mealbar-promo-renderer/div/div[2]/ytd-button-renderer[1]/a').click()
                         click_premium += 1
@@ -109,7 +112,7 @@ async def run_firefox_browser():
                     pass
 
                 body.send_keys(Keys.PAGE_UP)
-                await asyncio.sleep(10)
+                await asyncio.sleep(sl)
 
             firefox_browser.close()
         count_fire_fox += 1
