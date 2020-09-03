@@ -58,7 +58,7 @@ async def run_chrome_browser():
 
             for i in range(int(time_sleep/10)):
                 try:
-                    chrome_browser.find_element_by_xpath('//*[ @ id = "text"]').click()
+                    chrome_browser.find_element_by_xpath('//*[@id="button"]').click()
                     chrome_browser.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
                 except:
                     pass
@@ -100,7 +100,7 @@ async def run_firefox_browser():
 
             for i in range(int(time_sleep/10)):
                 try:
-                    firefox_browser.find_element_by_xpath('//*[ @ id = "text"]').click()
+                    firefox_browser.find_element_by_xpath('//*[@id="button"]').click()
                     firefox_browser.find_element_by_tag_name('body').send_keys(Keys.CONTROL + Keys.HOME)
                 except:
                     pass
