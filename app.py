@@ -76,7 +76,7 @@ async def run_chrome_browser():
                 await asyncio.sleep(sl)
 
             chrome_browser.close()
-            await asyncio.sleep(60)
+            await asyncio.sleep(5)
 
         count_browser += 1
         await asyncio.sleep(60 * 10)
@@ -120,7 +120,7 @@ async def run_firefox_browser():
                 await asyncio.sleep(sl)
 
             firefox_browser.close()
-            await asyncio.sleep(60)
+            await asyncio.sleep(5)
 
         count_fire_fox += 1
         await asyncio.sleep(60*10)
