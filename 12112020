@@ -1,0 +1,26 @@
+import pandas as pd
+import time
+import os
+import win32com.client
+
+# Create Excel Application
+try:
+    start = time.time()
+    xlApp=win32com.client.Dispatch("Excel.Application")
+    # In default, Python open excel book visibly.
+    xlApp.Workbooks.Open(Filename=r"C:\Users\Admin\Documents\vba.xlsm")
+    xlApp.Application.Run("vba.xlsm!Module1.convert_txt", r"C:\Users\Admin\Documents\Book1.xlsx", r"C:\Users\Admin\Documents\Book1.txt")
+
+
+    df = pd.read_csv(r"C:\Users\Admin\Documents\Book1.txt",  encoding='utf-16', sep='\t')
+    print(time.time()-start)
+finally:
+    xlApp.Application.Quit()
+
+"Public Sub convert_txt(input_file, output_file):
+Application.DisplayAlerts = False
+Set wb = Workbooks.Open(Filename:=input_file, ReadOnly:=True)
+wb.Sheets(1).SaveAs Filename:=output_file, FileFormat:=xlUnicodeText, CreateBackup:=False
+ActiveWorkbook.Close SaveChanges:=False
+Application.DisplayAlerts = True
+End Sub""
